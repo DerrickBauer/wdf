@@ -1,0 +1,25 @@
+<h1>Gigs</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  <% @gigs.each do |gig| %>
+    <tr>
+      <td><%= gig.name %></td>
+      <td><%= gig.location %></td>
+      <td><%= gig.date %></td>
+      <td><%= gig.description %></td>
+      <td>
+        <ul>
+          <li><%= link_to 'Edit', edit_gig_path(gig) %></li>
+          <li><%= link_to 'Delete', gig_path(gig), method: :delete, data:{confirm: 'Are you sure?'} %></li>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Gig', new_gig_path %>

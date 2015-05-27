@@ -1,0 +1,24 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: GigOne
+  location: G1Location
+  date: 2015-05-18 18:10:39
+  description: G1Description
+
+two:
+  id: 2
+  name: GigTwo
+  location: G2Location
+  date: 2014-05-18 18:10:39
+  description: G2Description
+
+<% (3..20).each do |n| %>
+<%="gig_#{n}"%>:
+  id: <%= n %>
+  name: <%= "Gig#{n}Name" %>
+  location: <%= "Gig#{n}Location" %>
+  date: 2014-05-18 18:10:39
+  description: <%= "Gig#{n}Description" %>
+<% end %>
