@@ -1,0 +1,22 @@
+<h1>Gigs</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Youtube Id</th>
+    <th>Display?</th>
+  </tr>
+  <% @videos.each do |video| %>
+    <tr>
+      <td><%= video.title %></td>
+      <td><%= video.youtube_id %></td>
+      <td><%= video.display %></td>
+      <td>
+        <ul>
+          <li><%= link_to 'Edit', edit_video_path(video) %></li>
+          <li><%= link_to 'Delete', video_path(video), method: :delete, data:{confirm: 'Are you sure?'} %></li>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Video', new_video_path %>

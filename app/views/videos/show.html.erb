@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+<p>
+  <strong>Youtube Id:</strong>
+  <%= @video.youtube_id %>
+</p>
+<p>
+  <strong>Display?:</strong>
+  <%= @video.display %>
+</p>
+<%= link_to 'Edit', edit_video_path(@video) %>
+<%= link_to 'All Videos', videos_path %>
