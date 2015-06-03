@@ -1,5 +1,4 @@
 class GigsController < ApplicationController
-  # before_filter :authorize
   before_action :authenticate_user!
   
   def index
